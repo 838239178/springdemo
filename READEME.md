@@ -1,6 +1,6 @@
-# :leaves:Spring+SpringMvc Demo
+# :leaves:Spring+SpringMvc+Mybatis Demo
 
-这是一个使用Spring+SpringMvc完成的一个简单的后端小项目，主要是对一阶段学习的总结和实践。
+这是一个使用Spring+SpringMvc+Mybatis完成的一个简单的后端小项目，主要是对一阶段学习的总结和实践。
 
 ## 数据库支持
 
@@ -17,4 +17,6 @@
 
 - 用户登录管理
 - 数据库增删查改
-- 简单异常处理
+- 统一完善的异常处理
+- 切面增强日志系统
+- 权限检验拦截器
