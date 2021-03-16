@@ -6,6 +6,7 @@
 
 - 数据库版本：SQLServer2019 v18.8
 - 数据连接池：com.alibaba.druid v1.2.4
+- 测试框架：junit4 + mockmvc
 
 ### 数据库关系结构
 
