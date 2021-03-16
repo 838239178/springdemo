@@ -1,4 +1,4 @@
-package cn.shijh.dao;
+package cn.shijh.dao.deprecated;
 
 public interface ContactDao {
     int setContact(Long userId, Long[] roleIds);

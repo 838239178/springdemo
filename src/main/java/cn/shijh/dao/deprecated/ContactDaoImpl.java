@@ -1,15 +1,11 @@
-package cn.shijh.dao.impl;
+package cn.shijh.dao.deprecated;
 
-import cn.shijh.dao.ContactDao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
 
-@Repository
+@Deprecated
 public class ContactDaoImpl implements ContactDao {
 
-    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override

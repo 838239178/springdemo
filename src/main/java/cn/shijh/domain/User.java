@@ -1,63 +1,23 @@
 package cn.shijh.domain;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.annotation.JSONType;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.lang.reflect.Field;
+import java.util.List;
 
 @JSONType(orders = {"id", "userName", "password", "email", "phoneNum"})
+@Getter
+@Setter
 public class User {
 
-    private long id;
+    private Long id;
     private String userName;
     private String email;
     private String password;
     private String phoneNum;
 
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    public String getPhoneNum() {
-        return phoneNum;
-    }
-
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
+    private List<Role> roleList;
 
     @Override
     public String toString() {
@@ -67,6 +27,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", phoneNum='" + phoneNum + '\'' +
+                ", roleList=" + roleList +
                 '}';
     }
 }

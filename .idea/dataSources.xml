@@ -7,5 +7,11 @@
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
       <jdbc-url>jdbc:sqlserver://localhost:1433;database=company</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="root@pressed.top" uuid="ec21740d-7aad-4350-8cc8-6417c1ef0309">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://pressed.top:3306/mydb</jdbc-url>
+    </data-source>
   </component>
 </project>

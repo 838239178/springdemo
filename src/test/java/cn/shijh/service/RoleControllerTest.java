@@ -1,15 +1,9 @@
 package cn.shijh.service;
 
-import com.alibaba.fastjson.parser.Feature;
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.alibaba.fastjson.support.config.FastJsonConfig;
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -17,7 +11,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -55,7 +48,7 @@ public class RoleControllerTest {
                         .post("/role/save")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                         .characterEncoding("UTF-8")
-                        .param("roleName", "宇航员").param("roleDesc", "上天的人")
+                        .param("roleName", "老王").param("roleDesc", "喜欢住隔壁")
         ).andReturn();
         System.out.println(res.getResponse().getContentAsString());
     }
@@ -67,7 +60,7 @@ public class RoleControllerTest {
                         .post("/user/login")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                         .characterEncoding("UTF-8")
-                        .param("userName", "qqqq")
+                        .param("userName", "zhangsan")
                         .param("password", "123")
         ).andReturn();
         System.out.println(res.getResponse().getContentAsString());
@@ -91,17 +84,16 @@ public class RoleControllerTest {
     }
 
     @Test
-    public void test5() throws Exception{
+    public void test5() throws Exception {
         MvcResult res = mockMvc.perform(
                 MockMvcRequestBuilders
-                        .post("/user/cancellation")
+                        .post("/user/delete")
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                         .characterEncoding("UTF-8")
-                        .param("userName", "laoliu")
+                        .param("id", "14")
         ).andReturn();
         System.out.println(res.getResponse().getContentAsString());
     }
-
 
 
     @Test

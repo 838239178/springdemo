@@ -1,8 +1,7 @@
-package cn.shijh.interceptor;
+package cn.shijh.aop.interceptor;
 
 import cn.shijh.domain.User;
 import cn.shijh.utils.MapBuilder;
-import com.alibaba.druid.support.json.JSONUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;

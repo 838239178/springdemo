@@ -1,28 +1,20 @@
-package cn.shijh.dao.impl;
+package cn.shijh.dao.deprecated;
 
-import cn.shijh.dao.UserDao;
 import cn.shijh.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
-import org.springframework.lang.Nullable;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-@Repository
+@Deprecated
 public class UserDaoImpl implements UserDao {
 
-    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override

@@ -1,19 +1,15 @@
-package cn.shijh.dao.impl;
+package cn.shijh.dao.deprecated;
 
-import cn.shijh.dao.RoleDao;
 import cn.shijh.domain.Role;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.lang.Nullable;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+@Deprecated
 public class RoleDaoImpl implements RoleDao {
 
-    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     @Override

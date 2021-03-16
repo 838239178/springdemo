@@ -21,8 +21,8 @@
     
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/role/list"/>
-            <bean class="cn.shijh.interceptor.PrivilegeInterceptor"/>
+            <mvc:mapping path="/abc/list"/>
+            <bean class="cn.shijh.aop.interceptor.PrivilegeInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
 

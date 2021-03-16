@@ -13,8 +13,12 @@ public class MapBuilder {
              map = new LinkedHashMap<>();
          }
 
+         public MapBuildAction(Map<? extends String, ?> map) {
+             this.map = new LinkedHashMap<>(map);
+         }
+
          public MapBuildAction add(String key, Object value) {
-             map.put(key,value);
+             map.put(key, value);
              return this;
          }
 
@@ -22,12 +26,16 @@ public class MapBuilder {
              return this.map;
          }
 
-         public String json(){
+         public String json() {
              return JSON.toJSONString(this.map);
          }
      }
 
-     public static MapBuildAction map() {
-         return new MapBuildAction();
-     }
+    public static MapBuildAction map() {
+        return new MapBuildAction();
+    }
+
+    public static MapBuildAction map(Map<? extends String, ?> map) {
+        return new MapBuildAction(map);
+    }
 }

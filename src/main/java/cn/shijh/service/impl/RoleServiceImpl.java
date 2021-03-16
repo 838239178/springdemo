@@ -1,6 +1,6 @@
 package cn.shijh.service.impl;
 
-import cn.shijh.dao.RoleDao;
+import cn.shijh.dao.mapper.RoleMapper;
 import cn.shijh.domain.Role;
 import cn.shijh.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +14,19 @@ import java.util.List;
 public class RoleServiceImpl implements RoleService {
 
     @Autowired
-    private RoleDao dao;
+    private RoleMapper roleMapper;
 
     @Override
     public List<Role> getList() {
-        return dao.findAll();
+        return roleMapper.findAll();
     }
 
     @Override
-    public boolean save(Role role) {
-        return dao.insert(role.getRoleName(), role.getRoleDesc()) > 0;
+    public Role save(Role role) throws IllegalArgumentException {
+        int row = roleMapper.insert(role);
+        if (row == 0) {
+            throw new IllegalArgumentException("role insert fail, check roleName");
+        }
+        return role;
     }
 }

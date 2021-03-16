@@ -1,4 +1,4 @@
-package cn.shijh.dao;
+package cn.shijh.dao.deprecated;
 
 import cn.shijh.domain.Role;
 
