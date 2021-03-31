@@ -61,7 +61,7 @@ public class RoleControllerTest {
                         .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                         .characterEncoding("UTF-8")
                         .param("userName", "zhangsan")
-                        .param("password", "123")
+                        .param("password", "3333333")
         ).andReturn();
         System.out.println(res.getResponse().getContentAsString());
     }

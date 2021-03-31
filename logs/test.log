@@ -1,0 +1,14 @@
+20:29:19.376 INFO  org.springframework.test.context.support.AbstractTestContextBootstrapper 248 getDefaultTestExecutionListenerClassNames - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+20:29:19.399 INFO  org.springframework.test.context.support.AbstractTestContextBootstrapper 177 getTestExecutionListeners - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1ce24091, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5dda768f, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7a8c8dcf, org.springframework.test.context.support.DirtiesContextTestExecutionListener@24269709, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2aceadd4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@24aed80c, org.springframework.test.context.event.EventPublishingTestExecutionListener@3a52dba3]
+20:29:20.009 DEBUG org.apache.ibatis.logging.LogFactory 105 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+20:29:20.909 INFO  org.springframework.mock.web.MockServletContext 455 log - Initializing Spring TestDispatcherServlet ''
+20:29:20.909 INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet ''
+20:29:20.918 INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 8 ms
+20:29:21.083 INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+20:29:21.609 INFO  cn.shijh.aop.SystemLogAspect 27 serviceInfo - [zhangsan, 3333333]
+20:29:21.634 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 137 debug - ==>  Preparing: SELECT * FROM users WHERE (userName=? AND password=?)
+20:29:21.678 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 137 debug - ==> Parameters: zhangsan(String), 3333333(String)
+20:29:21.713 DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 137 debug - <==      Total: 0
+20:29:21.719 ERROR cn.shijh.aop.SystemLogAspect 32 exceptionLog - cn.shijh.service.impl.UserServiceImpl@3b36e000: 'username no exit or password wrong'
+20:29:21.740 INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+20:29:21.743 INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed

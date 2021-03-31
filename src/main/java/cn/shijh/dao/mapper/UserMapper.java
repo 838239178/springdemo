@@ -46,10 +46,13 @@ public interface UserMapper {
                 SELECT("*");
                 FROM("users");
                 if (user.getId() != null) {
-                    WHERE("id = #{id}");
+                    WHERE("id=#{id}");
                 }
                 if (user.getUserName() != null) {
                     WHERE("userName=#{userName}");
+                }
+                if (user.getPassword() != null) {
+                    WHERE("password=#{password}");
                 }
                 if (user.getPhoneNum() != null) {
                     WHERE("phoneNum=#{phoneNme}");
